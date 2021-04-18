@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">The Movies DB</string>
+    <string name="movie_image">movie image</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="dummy_date">Mar 24, 2021</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="popular_tv_shows">Popular TV Shows</string>
+    <string name="trending_today">Trending Today</string>
+    <string name="weekly_trending">Trending This week</string>
+    <string name="dummy_ratings">8.6</string>
+    <string name="app_splash_screen_logo">app splash screen logo</string>
+    <string name="no_data_available">No data available</string>
+    <string name="daily_fetch_shows">Fetching daily Trending Shows…</string>
+    <string name="error_message">Something went Wrong, Please check your Internet !</string>
+    <string name="fetching_weekly_shows">Fetching weekly Trending Shows…</string>
+    <string name="fetching_pop_mov">Fetching popular Movies…</string>
+    <string name="fetching_pop_tv">Fetching popular TV Shows…</string>
+
+</resources>

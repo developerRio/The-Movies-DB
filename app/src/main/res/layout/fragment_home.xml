@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.fragments.HomeFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".012" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/top_header_text_view"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_movie_logo"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline_end"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_top" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pop_mov_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="@string/popular_movies"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/top_header_text_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_movies_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/pop_mov_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeholder_mov_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/no_data_available"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/popular_tv_shows_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/pop_mov_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/popular_tv_shows_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="@string/popular_tv_shows"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/popular_movies_recycler_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_tv_shows_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/popular_tv_shows_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeholder_tv_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/no_data_available"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/trending_today_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/popular_tv_shows_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trending_today_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="@string/trending_today"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/popular_tv_shows_recycler_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trending_today_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/trending_today_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeholder_trending_daily_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/no_data_available"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/weekly_trending_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/trending_today_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/weekly_trending_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="@string/weekly_trending"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/trending_today_recycler_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weekly_trending_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/weekly_trending_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeholder_trending_weekly_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/no_data_available"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/weekly_trending_recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/weekly_trending_text_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
