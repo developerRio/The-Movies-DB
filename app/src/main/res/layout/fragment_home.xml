@@ -45,6 +45,8 @@
                 app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
                 app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_top" />
 
+            <!--todo: Need to convert all these recycler views into one, with multiple view types -->
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pop_mov_text_view"
                 android:layout_width="wrap_content"
