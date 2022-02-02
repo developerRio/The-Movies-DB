@@ -1,6 +1,7 @@
 package com.originalstocks.themoviesdb.data.paging.pagingSource
 
 import androidx.paging.PagingSource
+import androidx.paging.PagingState
 import com.originalstocks.themoviesdb.data.model.WeeklyTrendingShow
 import com.originalstocks.themoviesdb.data.network.RequestInterface
 import com.originalstocks.themoviesdb.utils.API_KEY
@@ -24,5 +25,9 @@ class TrendingWeeklyPagingSource(val requestInterface: RequestInterface) :
         } catch (e: HttpException) {
             LoadResult.Error(e)
         }
+    }
+
+    override fun getRefreshKey(state: PagingState<Int, WeeklyTrendingShow>): Int? {
+        return getRefreshKey(state)
     }
 }
